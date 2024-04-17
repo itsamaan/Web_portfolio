@@ -92,24 +92,24 @@ export const Socials = [
 ];
 export const Projects = [
   {
-    title: "Modern Nextjs Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/NextWebsite.png",
+    title: "ShopNow",
+    text: "Crafted an E-Commerce Web Application incorporated with a payment gateway and a product gallery.",
+    src: "/ShopNow_web.png",
   },
   {
-    title: "Space Themed Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/SpaceWebsite.png",
+    title: "Covid-19 Updater",
+    text: "Web application to visualise real time statistics of COVID-19, globally and separately for India.",
+    src: "/covid-web.png",
   },
   {
-    title: "Modern Nextjs Portfolio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/WebPortfolio.png",
+    title: "To-Do App",
+    text: "Implemented local storage functionality within the app for persistent data and enhanced user experience using React hooks.",
+    src: "/To-do_web.png",
   },
   {
-    title: "Matrix themed Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/Matrix.png",
+    title: "Talking Dictionary",
+    text: "Created the Talking Dictionary, a speech-enabled computer app that enhances vocabulary and language skills.",
+    src: "/Talking_dict_app.png",
   },
 ];
 
