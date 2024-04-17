@@ -1,42 +1,49 @@
-import { Socials } from "@/constants";
-import Image from "next/image";
-import React from "react";
+"use client";
+import { NavLinks } from "@/constants";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import Transition from "./Transition";
 
-const Navbar = () => {
+const Navigation = () => {
+  const [isRouting, setisRouting] = useState(false);
+  const path = usePathname();
+  const [prevPath, setPrevPath] = useState("/");
+
+  useEffect(() => {
+    if (prevPath !== path) {
+      setisRouting(true);
+    }
+  }, [path, prevPath]);
+
+  useEffect(() => {
+    if (isRouting) {
+      setPrevPath(path);
+      const timeout = setTimeout(() => {
+        setisRouting(false);
+      }, 1200);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [isRouting]);
   return (
-    <div className="fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-10 md:px-20">
-      <div className="flex flex-row gap-3 items-center">
-        <div className="relative">
-          {/* <Image
-            src="/horseLogo.jpg"
-            alt="logo"
-            width={40}
-            height={40}
-            className="w-full h-full object-contain rounded-full"
-          /> */}
-        </div>
-        <h1 className="text-white text-[25px] font-semibold">
-          {" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-            {" "}
-            Mohd Amaan{" "}
-          </span>
-        </h1>
-      </div>
+    <div
+      style={{ left: "20%" }}
+      className="absolute z-[50] -bottom-20 w-[50%] md:w-[20%] max-h-[150px] rounded-full flex justify-between items-center border bg-black border-white px-4 py-7"
+    >
 
-      <div className="flex flex-row gap-5 mb-2">
-        {Socials.map((social) => (
-          <Image
-            key={social.name}
-            src={social.src}
-            alt={social.name}
-            width={28}
-            height={28}
+      {isRouting && <Transition />}
+      {NavLinks.map((nav) => (
+        <Link key={nav.name} href={nav.link} className="mb-16 pl-4 min-w-[20%]">
+          <nav.icon
+            className={`w-[24px] h-[24px] ${
+              path === nav.name ? "text-purple-800" : "text-white"
+            }`}
           />
-        ))}
-      </div>
+        </Link>
+      ))}
     </div>
   );
 };
 
-export default Navbar;
+export default Navigation;
