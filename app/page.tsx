@@ -19,7 +19,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-gray-200 hidden md:block">
-          I am a Computer Science and Engineering graduate with a strong passion for web development. Proficient in HTML, CSS, JavaScript/Typescript, React.js, Next.js , Node.js, MySQL , Git and Python. I excel in crafting innovative solutions. With a track record of mentoring peers and leading successful teams, I'm committed to continuous learning and creative problem-solving.
+          I am a Computer Science and Engineering graduate with a strong passion for web development. Proficient in HTML CSS JavaScript/Typescript React.js Next.js  Node.js MySQL  Git and Python. I excel in crafting innovative solutions. With a track record of mentoring peers and leading successful teams. I am committed to continuous learning and creative problem-solving.
           </p>
           <div className="flex-col md:flex-row hidden md:flex gap-5">
             <Link
